@@ -1,0 +1,24 @@
+<div class="row">
+	<div class="col">
+		<h3>*ngIf</h3>
+		<hr>
+		<button type="button" class="btn btn-lg btn-primary" (click)="tarjeta=!tarjeta">Mostrar/Ocultar</button>
+		<!--Contenido a Mostrar y Ocultar con ngIf-->
+		<div class="card border-info mb-3" *ngIf="tarjeta">
+		  <div class="card-header">{{info.header}}</div>
+		  <div class="card-body text-info">
+		    <h4 class="card-title">{{info.title}}</h4>
+		    <p class="card-text">{{info.msg}}</p>
+		  </div>
+		</div>
+
+	</div>
+	<div class="col">
+		<h3>*ngFor</h3>
+		<hr>
+		<!--Lista a desplegar con ngFor-->
+		<ul class="list-group">
+			<li class="list-group-item" *ngFor="let champ of champs; let i = index">{{i+1}}. {{champ}}</li>
+		</ul>
+	</div>
+</div>
